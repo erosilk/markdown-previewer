@@ -17,7 +17,11 @@ class App extends Component {
         this.setState({
             inputValue: event.target.value
   })
-  }
+}
+
+processInput(){
+
+}
 
   render() {
     return (

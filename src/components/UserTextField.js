@@ -4,7 +4,7 @@ class UserTextField extends Component
 {
     render() {
         return (
-            <textarea onChange={this.props.userInput} value={this.props.inputValue}  />
+            <textarea className="userinput" onChange={this.props.userInput} value={this.props.inputValue}  />
         )
     }
 }

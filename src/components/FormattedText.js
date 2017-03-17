@@ -1,21 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+//import './FormattedText.css';
+
+let commonmark = require('commonmark');
+let reader = new commonmark.Parser();
+let writer = new commonmark.HtmlRenderer();
 
 
 class FormattedText extends Component 
 {
     constructor(props) {
         super(props)
-        this.textSource = <h1>Hola</h1>;
         this.state = {
         }
     }
 
 
     render() {
+
+        let parsed = reader.parse(this.props.UserTextField);
+        let result = writer.render(parsed);
+
         return (
-
-            <div> {this.textSource} </div>
-
+            <div className="formattedtext" dangerouslySetInnerHTML={{__html: result}} />
         )
     }
 }
