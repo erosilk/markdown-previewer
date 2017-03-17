@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import './FormattedText.css';
 
 let commonmark = require('commonmark');
 let reader = new commonmark.Parser();

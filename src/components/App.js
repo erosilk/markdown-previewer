@@ -26,6 +26,7 @@ processInput(){
   render() {
     return (
       <div className="window">
+      
         <UserTextField userInput={this.userInput} inputValue={this.state.inputValue}/>
         <FormattedText UserTextField={this.state.inputValue} />
       </div>
